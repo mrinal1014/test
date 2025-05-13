@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-t*82cefaxx2pnuepxo1b$kudthz*b(a0clr_sy@qs8%77=s7$d
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://test-f4ru.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -85,7 +85,7 @@ import dj_database_url
 DATABASE_URL=os.getenv("DATABASE_URL")
 
 from dotenv import load_dotenv
-import dj_database_url
+
 DATABASES = {
     'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
