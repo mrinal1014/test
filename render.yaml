@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: career-chatbot
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn career_chatbot.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: career_chatbot.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: SECRET_KEY
+        generateValue: true
